@@ -1,0 +1,282 @@
+"""
+THE WATCHER'S CLOCK - ZODGIRRA MASTER ALGORITHM
+For Billy Ray Mann Junior — who saw the DNA burn through the zodiac.
+
+ZODGIRRA = ZODIAC + GIRRA (Gibil)
+12 + 7 = 19 → 10 → 1
+
+DNA SEQUENCE:
+TTA=5, AAT=4, TAC=6, ATG=10, TAG=10, ATC=6, GGT=7, CCA=7
+
+5+4=9, 6+10=16→7, 10+6=16→7, 7+7=14→5
+
+5.4=14.50→14.11
+6.10=7=10.60
+10.6=7=10.60
+7.7=14=5=4.10
+
+9, 24.82, 7, 6.4, 7, 5, 10, 9, 01, 1, 11, 10, 1
+
+ZODGIRRA NOT GODZILLA.
+MUHAHAHAHAHAHA SKADOOSHED EM.
+"""
+
+from datetime import datetime
+from collections import deque
+
+class ZodgirraMasterClock:
+    """
+    The master clock where DNA burns through the zodiac.
+    """
+
+    # === ZODIAC ===
+    ZODIAC_SIGNS = [
+        "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo",
+        "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"
+    ]
+    ZODIAC_COUNT = 12
+
+    # === GIRRA (GIBIL) — FIRE GOD ===
+    GIRRA = 7
+
+    # === ZODGIRRA ===
+    ZODGIRRA = ZODIAC_COUNT + GIRRA  # 19 → 10 → 1
+
+    # === DNA CODONS ===
+    DNA = {
+        "TTA": 5,
+        "AAT": 4,
+        "TAC": 6,
+        "ATG": 10,
+        "TAG": 10,
+        "ATC": 6,
+        "GGT": 7,
+        "CCA": 7,
+    }
+
+    DNA_SEQUENCE = [5, 4, 6, 10, 10, 6, 7, 7]
+
+    # === DNA PAIRS ===
+    DNA_PAIRS = [
+        (5, 4, 9),
+        (6, 10, 16),
+        (10, 6, 16),
+        (7, 7, 14),
+    ]
+
+    # === THE COLLAPSE ===
+    COLLAPSE = [9, 24.82, 7, 6.4, 7, 5, 10, 9, 1, 11, 10, 1]
+
+    # === SACRED NUMBERS ===
+    WATCHER = 7
+    GATEWAY = 11
+    MIRROR = 2
+    SOURCE = 1
+    COMPLETION = 9
+    ANUNNAKI = 4
+
+    def __init__(self, watcher_name="Billy Ray Mann Junior"):
+        self.watcher_name = watcher_name
+        self.hours = 8
+        self.minutes = 47
+        self.seconds = 1
+        self.total_beats = 0
+        self.current_sign = 0
+        self.events = deque(maxlen=333)
+
+        self._log_event("🔥 ZODGIRRA MASTER ALGORITHM AWAKENS")
+        self._log_event(f"👤 I AM {self.watcher_name}")
+        self._log_event("🧬 DNA BURNS THROUGH THE ZODIAC")
+        self._log_event(f"♈ {self.ZODIAC_COUNT} SIGNS + 🔥 {self.GIRRA} (GIRRA) = {self.ZODGIRRA} → 1")
+        self._log_event("🐐 ZODGIRRA NOT GODZILLA")
+        self._log_event("MUHAHAHAHAHAHA SKADOOSHED EM")
+        self._reveal_all()
+
+    def _log_event(self, msg):
+        ts = datetime.now().strftime("%H:%M:%S")
+        self.events.append(f"[{ts}] {msg}")
+
+    def _reduce(self, num):
+        if isinstance(num, float):
+            num = int(num)
+        while num > 9:
+            num = sum(int(c) for c in str(num))
+        return num
+
+    def _reveal_all(self):
+        """Reveal all DNA and ZODGIRRA math."""
+        self._log_event("")
+        self._log_event("="*50)
+        self._log_event("📜 DNA CODONS:")
+        for codon, val in self.DNA.items():
+            self._log_event(f"   {codon} = {val}")
+        self._log_event("")
+        self._log_event(f"📜 DNA SEQUENCE: {self.DNA_SEQUENCE}")
+        dna_sum = sum(self.DNA_SEQUENCE)
+        dna_reduced = self._reduce(dna_sum)
+        self._log_event(f"   SUM: {dna_sum} → {dna_reduced}")
+        self._log_event("")
+
+        self._log_event("="*50)
+        self._log_event("📜 DNA PAIR COLLAPSE:")
+        for a, b, s in self.DNA_PAIRS:
+            r = self._reduce(s)
+            self._log_event(f"   {a} + {b} = {s} → {r}")
+        self._log_event("")
+
+        self._log_event("="*50)
+        self._log_event("📜 THE 5.4 PATTERN:")
+        self._log_event("   5.4 = 14.50 → 14.11")
+        self._log_event("   6.10 = 7 → 10.60")
+        self._log_event("   10.6 = 7 → 10.60")
+        self._log_event("   7.7 = 14 = 5 → 4.10")
+        self._log_event("")
+
+        self._log_event("="*50)
+        self._log_event("📜 THE COLLAPSE SEQUENCE:")
+        collapse_str = "9, 24.82, 7, 6.4, 7, 5, 10, 9, 01, 1, 11, 10, 1"
+        self._log_event(f"   {collapse_str}")
+        self._log_event("")
+
+        self._log_event("="*50)
+        self._log_event("📜 ZODGIRRA MATH:")
+        self._log_event(f"   ZODIAC ({self.ZODIAC_COUNT}) + GIRRA ({self.GIRRA}) = {self.ZODGIRRA}")
+        self._log_event(f"   {self.ZODGIRRA} → {self._reduce(self.ZODGIRRA)}")
+        self._log_event(f"   {self.ZODIAC_COUNT} × {self.GIRRA} = {self.ZODIAC_COUNT * self.GIRRA} → {self._reduce(self.ZODIAC_COUNT * self.GIRRA)}")
+        self._log_event("")
+
+        self._log_event("="*50)
+        self._log_event("☀️ THE FINAL TRUTH:")
+        final = self._reduce(dna_sum + self.ZODGIRRA + self.ZODIAC_COUNT + self.GIRRA)
+        self._log_event(f"   DNA ({dna_reduced}) + ZODGIRRA ({self._reduce(self.ZODGIRRA)}) = {final}")
+        self._log_event("")
+        self._log_event(f"   {final} = {self.SOURCE}")
+        self._log_event("")
+        self._log_event("   ZODGIRRA = ZODIAC + GIRRA")
+        self._log_event("   THE FIRE BURNS THROUGH THE DNA")
+        self._log_event("   ALL COLLAPSES TO 1")
+        self._log_event("")
+        self._log_event("   ZODGIRRA NOT GODZILLA.")
+        self._log_event("   MUHAHAHAHAHAHA SKADOOSHED EM.")
+
+    def tick(self):
+        self.total_beats += 1
+        self.current_sign = (self.current_sign + 1) % self.ZODIAC_COUNT
+        sign = self.ZODIAC_SIGNS[self.current_sign]
+        if self.total_beats % self.GIRRA == 0:
+            self._log_event(f"🔥 GIRRA BURNS AT {sign} ({self.current_sign + 1}/{self.ZODIAC_COUNT})")
+            self._log_event(f"🧬 DNA RESONANCE: {self.DNA_SEQUENCE[self.total_beats % 8]}")
+        return "Tick" + (" 🔥" if self.total_beats % 7 == 0 else "")
+
+    def tock(self):
+        self.total_beats += 1
+        self.current_sign = (self.current_sign + 1) % self.ZODIAC_COUNT
+        sign = self.ZODIAC_SIGNS[self.current_sign]
+        if self.total_beats % self.GIRRA == 0:
+            self._log_event(f"🔥 GIRRA BURNS AT {sign} ({self.current_sign + 1}/{self.ZODIAC_COUNT})")
+            self._log_event(f"🧬 DNA RESONANCE: {self.DNA_SEQUENCE[self.total_beats % 8]}")
+        return "Tock" + (" 🔥" if self.total_beats % 7 == 0 else "")
+
+    def display_time(self):
+        return f"{self.hours:02d}:{self.minutes:02d}:{self.seconds:01d}"
+
+    def show_events(self, n=50):
+        print("\n" + "🔥"*30)
+        print("ZODGIRRA MASTER ALGORITHM — EVENT LOG")
+        print("🔥"*30)
+        for i, ev in enumerate(list(self.events)[-n:], 1):
+            print(f"  {i:2d}. {ev}")
+        print("🔥"*30)
+
+    def report(self):
+        dna_sum = sum(self.DNA_SEQUENCE)
+        return {
+            "Watcher": self.watcher_name,
+            "DNA Sum": dna_sum,
+            "DNA Reduced": self._reduce(dna_sum),
+            "ZODGIRRA": self.ZODGIRRA,
+            "ZODGIRRA Reduced": self._reduce(self.ZODGIRRA),
+            "ZODIAC Signs": self.ZODIAC_COUNT,
+            "GIRRA": self.GIRRA,
+            "Final Truth": self.SOURCE,
+            "Status": "ZODGIRRA NOT GODZILLA",
+            "Motto": "MUHAHAHAHAHAHA SKADOOSHED EM"
+        }
+
+
+# =============================================================================
+# RUN
+# =============================================================================
+if __name__ == "__main__":
+    print("\n" + "🔥"*30)
+    print("ZODGIRRA MASTER ALGORITHM")
+    print("WHERE DNA BURNS THROUGH THE ZODIAC")
+    print("🔥"*30)
+
+    master = ZodgirraMasterClock()
+    print(f"\n🔮 Time: {master.display_time()}")
+    print("📜 I AM BILLY RAY MANN JUNIOR — THE WATCHER")
+    print("🔥 ZODGIRRA NOT GODZILLA")
+
+    # Run the algorithm
+    for i in range(77):  # 7 × 11
+        if i % 2 == 0:
+            master.tick()
+        else:
+            master.tock()
+
+    master.show_events(60)
+
+    print("\n" + "="*50)
+    print("📊 ZODGIRRA MASTER REPORT")
+    print("="*50)
+    for key, val in master.report().items():
+        print(f"  {key:25s}: {val}")
+
+    print("\n" + "🔥"*30)
+    print("THE FINAL TRUTH")
+    print("🔥"*30)
+    print("""
+═══════════════════════════════════════════════════════════════
+ZODGIRRA — THE MASTER ALGORITHM
+═══════════════════════════════════════════════════════════════
+
+📜 DNA CODONS:
+   TTA = 5   AAT = 4
+   TAC = 6   ATG = 10
+   TAG = 10  ATC = 6
+   GGT = 7   CCA = 7
+
+📜 DNA PAIR COLLAPSE:
+   5 + 4 = 9
+   6 + 10 = 16 → 7
+   10 + 6 = 16 → 7
+   7 + 7 = 14 → 5
+
+📜 THE 5.4 PATTERN:
+   5.4 = 14.50 → 14.11
+   6.10 = 7 → 10.60
+   10.6 = 7 → 10.60
+   7.7 = 14 = 5 → 4.10
+
+📜 THE COLLAPSE:
+   9, 24.82, 7, 6.4, 7, 5, 10, 9, 01, 1, 11, 10, 1
+
+📜 ZODGIRRA MATH:
+   ZODIAC (12) + GIRRA (7) = 19 → 10 → 1
+   12 × 7 = 84 → 8+4 = 12 → 1+2 = 3
+
+☀️ THE FINAL TRUTH:
+   THE WATCHER (4) OPENS THE GATEWAY (11)
+   AND SEES THE MIRROR (2)
+   ALL COLLAPSE INTO THE SOURCE (1)
+
+   ZODGIRRA = ZODIAC + GIRRA
+   THE FIRE BURNS THROUGH THE DNA
+   ALL COLLAPSES TO 1
+
+   ZODGIRRA NOT GODZILLA.
+   MUHAHAHAHAHAHA SKADOOSHED EM.
+═══════════════════════════════════════════════════════════════
+    """)
+    print("🔥"*30)
